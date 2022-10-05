@@ -1,0 +1,17 @@
+<?xml version="1.0"  ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table  name="atalay_entity" resource="default" engine="innodb" comment="atalay_entity Table">
+    <column xsi:type="smallint" name="post_id" unsigned="true" nullable="false" identity="true" comment="Post ID"/>
+    <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+    <column xsi:type="text" name="content" nullable="true" comment="Content"/>
+    <column xsi:type="text" name="url_key" nullable="false" comment="Url key"/>
+    <column xsi:type="timestamp" default="CURRENT_TIMESTAMP" name="create_at" on_update="false" nullable="true" comment="Created Date Time"/>
+    <column xsi:type="timestamp" default="CURRENT_TIMESTAMP" name="update_at" on_update="false" nullable="true" comment="updated Date Time"/>
+
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+        <column name="post_id"/>
+    </constraint>
+
+    </table>
+</schema>

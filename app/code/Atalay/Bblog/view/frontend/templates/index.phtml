@@ -1,0 +1,18 @@
+<?php
+/** @var $block Atalay\Bblog\Block\Index */
+?>
+
+    <p>Hello <?= $block->getTitle(); ?></p>
+ <?php if ($block->getBlogEntities()) :?>
+    <?php foreach ($block->getBlogEntities() as $content) : ?>
+    <table>
+        <tr>
+            <td><?= $content->getData('id')?></td>
+            <td><?= $content->getData('title')?></td>
+            <td><?= $content->getData('content')?></td>
+            <td><?= $content->getData('url_key')?></td>
+        </tr>
+        </table>
+    <?php endforeach; ?>
+ <?php endif; ?>
+

@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="atalay_bblog_blogt_listing_data_source" xsi:type="string">Atalay\Bblog\Model\ResourceModel\Blogt\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Atalay\Bblog\Model\ResourceModel\Blogt\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">atalay_bblog_atalay_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Atalay\Bblog\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
+</config>
